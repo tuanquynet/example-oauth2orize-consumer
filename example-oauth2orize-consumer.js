@@ -73,7 +73,7 @@ util.inherits(Strategy, OAuth2Strategy);
  * @api protected
  */
 Strategy.prototype.userProfile = function(accessToken, done) {
-  this._oauth2.get(pConf.protocol + '://' + pConf.host + '/api/userinfo', accessToken, function (err, body/*, res*/) {
+  this._oauth2.get(pConf.protocol + '://' + pConf.host + '/users/me', accessToken, function (err, body/*, res*/) {
     if (err) { return done(new InternalOAuthError('failed to fetch user profile', err)); }
     
     try {

@@ -2,12 +2,13 @@
 
 module.exports = {
 	provider: {
-		protocol: "http", 
-		host: "local.foobar3000.com:3001",
-		profileUrl: "/api/userinfo"
-	}, 
+		protocol: "http",
+		host: "localhost:3000",
+		// profileUrl: "/api/userinfo"
+		profileUrl: "/users/me"
+	},
 	consumer: {
-		protocol: "http", 
-		host: "local.helloworld3000.com:3002"
+		protocol: "http",
+		host: "localhost:3001"
 	}
 };
